@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="lib/utils.js"></script>
+    <script src="lib/template.js"></script>
+    <script src="lib/managers.js"></script>
+    <script src="lib/react.js"></script>
+    <style>
+        .done {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        const todoData = {
+            title: 'My todo app', 
+            list: [
+                { id: uuid(), name: 'wash', done: '', editting: false },
+                { id: uuid(), name: 'homework', done: '', editting: false }
+            ], newValue: '',
+        };
+    </script>
+    <script src="js/titleComponent.js"></script>
+    <script src="js/itemComponent.js"></script>
+    <script src="js/listComponent.js"></script>
+</body>
+</html>
