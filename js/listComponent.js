@@ -1,8 +1,8 @@
 const List = makeReactTemplate({
     $el: $('#app'),
-    template: `<div id='app'>
+    template: `<div id='app' class="container">
                {{ Title.render() }}
-               <ul>
+               <ul class="list-group">
                <% for(var i=0; i < todoData.list.length; i++) { %>
                    {{ Item.render(todoData.list[i]) }}
                <% } %>

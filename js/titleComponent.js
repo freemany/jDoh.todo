@@ -1,5 +1,5 @@
 const Title = makeReactTemplate({ 
-    template: `<div>
+    template: `<div class="row">
                 <h2>{{title}}</h2>
                 <input jd-model="newTitle" @keyup="update">
                 <button @click="changeTitle">Click to change title</button>

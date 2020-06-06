@@ -1,5 +1,5 @@
 const Item = makeReactTemplate({ 
-    template: `<li class="item {{done}}">
+    template: `<li class="item {{done}} list-group-item">
               <% if (editting === false) { %>{{name}}
               <% } else { %>
                 <input type="text" value="{{name}}" onfocus="this.select()" jd-model="edittingItem" >
