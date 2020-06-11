@@ -3,12 +3,10 @@ const List = makeReactTemplate({
     template: `<div id='app' class="container">
                {{ Title.render() }}
                <ul class="list-group">
-               <% for(var i=0; i < todoData.list.length; i++) { %>
-                   {{ Item.render(todoData.list[i]) }}
-               <% } %>
-              </ul>
-              <input type='text' value="{{todoData.newValue}}" onfocus="this.select()" jd-model="newItem" ><button @click="add">+</button>
-              </div>`,
+               {{ todoData.list.map(todo => Item.render(todo)) }}
+               </ul>
+               <input type='text' value="{{todoData.newValue}}" onfocus="this.select()" jd-model="newItem" ><button @click="add">+</button>
+               </div>`,
     methods: {
         add(e, el) {
             e.preventDefault();
